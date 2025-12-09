@@ -1,10 +1,10 @@
 class HomePage {
     elements = {
-        searchBar : () => cy.get("#APjFqb"),
+        searchBar : () => cy.get('[id="twotabsearchtextbox"]'),
     }
 
-    searchForSomething() {
-        this.elements.searchBar().type('Something');
+    searchForSomething(searchPrompt) {
+        this.elements.searchBar().type(searchPrompt).type('{enter}');
     }
 }
 
